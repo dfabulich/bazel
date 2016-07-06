@@ -32,8 +32,8 @@ public class BazelShutdownLoggerModule extends BlazeModule {
   @Override
   public void blazeStartup(OptionsProvider startupOptions, BlazeVersionInfo versionInfo,
       UUID instanceId, BlazeDirectories directories, Clock clock) {
-    LogManager.getLogManager().reset();
-    globalLogger = Logger.getGlobal();
-    globalLogger.setLevel(java.util.logging.Level.OFF);
+    //LogManager.getLogManager().reset();
+    //globalLogger = Logger.getGlobal();
+    //globalLogger.setLevel(java.util.logging.Level.OFF);
   }
 }

@@ -166,10 +166,11 @@ blaze_exit_code::ExitCode BlazeStartupOptions::AddJVMArguments(
   if (!WriteFile(
       "handlers=java.util.logging.FileHandler\n"
       ".level=INFO\n"
-      "java.util.logging.FileHandler.level=INFO\n"
+      "com.hazelcast.level=FINEST\n"
+      "java.util.logging.FileHandler.level=FINEST\n"
       "java.util.logging.FileHandler.pattern="
       + output_base + "/java.log\n"
-      "java.util.logging.FileHandler.limit=50000\n"
+      "java.util.logging.FileHandler.limit=50000000\n"
       "java.util.logging.FileHandler.count=1\n"
       "java.util.logging.FileHandler.formatter="
       "java.util.logging.SimpleFormatter\n",
